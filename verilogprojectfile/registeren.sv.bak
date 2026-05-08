@@ -1,0 +1,12 @@
+module 4bitregisteren(
+input clk,
+input en,
+input d,
+output q
+);
+reg r;
+always @(posedge clk) begin
+	if(en)
+	r<=d;
+end
+endmodule

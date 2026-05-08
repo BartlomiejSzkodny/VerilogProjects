@@ -1,0 +1,4 @@
+module TOP_MODULE(
+input przelacznik[9:0],
+output led[9:0]
+);

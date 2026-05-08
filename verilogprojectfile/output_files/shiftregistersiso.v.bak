@@ -1,0 +1,8 @@
+module shiftregister(
+input clk,
+input enable,
+input si,
+output so
+);
+always @(posedge )
+endmodule

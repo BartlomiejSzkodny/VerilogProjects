@@ -1,0 +1,54 @@
+|TOP_MODULE
+p[0] => ~NO_FANOUT~
+p[1] => p[1].IN1
+p[2] => p[2].IN1
+p[3] => ~NO_FANOUT~
+p[4] => ~NO_FANOUT~
+p[5] => ~NO_FANOUT~
+p[6] => ~NO_FANOUT~
+p[7] => ~NO_FANOUT~
+p[8] => ~NO_FANOUT~
+p[9] => ~NO_FANOUT~
+b[0] => b[0].IN1
+b[1] => ~NO_FANOUT~
+l[0] << shiftregister:ins_shiftreg.r
+l[1] << shiftregister:ins_shiftreg.r
+l[2] << shiftregister:ins_shiftreg.r
+l[3] << shiftregister:ins_shiftreg.r
+l[4] << shiftregister:ins_shiftreg.r
+l[5] << shiftregister:ins_shiftreg.r
+l[6] << shiftregister:ins_shiftreg.r
+l[7] << shiftregister:ins_shiftreg.r
+l[8] << shiftregister:ins_shiftreg.so
+l[9] << <GND>
+
+
+|TOP_MODULE|shiftregister:ins_shiftreg
+clk => r[0]~reg0.CLK
+clk => r[1]~reg0.CLK
+clk => r[2]~reg0.CLK
+clk => r[3]~reg0.CLK
+clk => r[4]~reg0.CLK
+clk => r[5]~reg0.CLK
+clk => r[6]~reg0.CLK
+clk => r[7]~reg0.CLK
+en => r[0]~reg0.ENA
+en => r[1]~reg0.ENA
+en => r[2]~reg0.ENA
+en => r[3]~reg0.ENA
+en => r[4]~reg0.ENA
+en => r[5]~reg0.ENA
+en => r[6]~reg0.ENA
+en => r[7]~reg0.ENA
+si => r[0]~reg0.DATAIN
+r[0] <= r[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= r[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= r[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= r[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[4] <= r[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[5] <= r[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[6] <= r[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r[7] <= r[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+so <= r[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

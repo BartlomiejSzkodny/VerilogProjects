@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at shiftregistersiso.v(8): always construct contains both blocking and non-blocking assignments File: /home/bamasz/Desktop/verilogProjects/VerilogProjects/verilogprojectfile/output_files/shiftregistersiso.v Line: 8
