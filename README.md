@@ -6,7 +6,7 @@
 **Focus:** always blocks, clk, reset, non-blocking assignments.
 
 1. [x] 4-bit Register with Enable
-2. [ ] 8-bit Shift Register (SISO)
+2. [x] 8-bit Shift Register (SISO)
 3. [ ] Shift Register (SIPO)
 4. [ ] Shift Register (PISO)
 5. [ ] Shift Register (PIPO)
