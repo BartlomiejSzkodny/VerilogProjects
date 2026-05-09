@@ -1,0 +1,8 @@
+module registerPIPO(
+input d,
+input clk,
+output q
+
+);
+always @ (negedge clk)
+endmodule

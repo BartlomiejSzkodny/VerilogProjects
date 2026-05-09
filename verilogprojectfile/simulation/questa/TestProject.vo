@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition"
 
-// DATE "05/09/2026 23:20:27"
+// DATE "05/09/2026 23:52:13"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -38,7 +38,7 @@ input 	[1:0] b;
 output 	[9:0] l;
 
 // Design Ports Information
-// p[0]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// b[0]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // b[1]	=>  Location: PIN_B8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // l[0]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // l[1]	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -52,7 +52,7 @@ output 	[9:0] l;
 // l[9]	=>  Location: PIN_B11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // p[1]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // p[9]	=>  Location: PIN_F15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// b[0]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// p[0]	=>  Location: PIN_C10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // p[2]	=>  Location: PIN_D12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // p[3]	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // p[4]	=>  Location: PIN_A12,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -73,7 +73,7 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \p[0]~input_o ;
+wire \b[0]~input_o ;
 wire \b[1]~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 wire \~QUARTUS_CREATED_UNVM~~busy ;
@@ -89,25 +89,25 @@ wire \l[6]~output_o ;
 wire \l[7]~output_o ;
 wire \l[8]~output_o ;
 wire \l[9]~output_o ;
-wire \b[0]~input_o ;
-wire \p[9]~input_o ;
+wire \p[0]~input_o ;
 wire \p[1]~input_o ;
-wire \pisoInst|temp_reg~0_combout ;
+wire \p[9]~input_o ;
+wire \instPIPO|tempreg~0_combout ;
 wire \p[2]~input_o ;
-wire \pisoInst|temp_reg~1_combout ;
+wire \instPIPO|tempreg~1_combout ;
 wire \p[3]~input_o ;
-wire \pisoInst|temp_reg~2_combout ;
+wire \instPIPO|tempreg~2_combout ;
 wire \p[4]~input_o ;
-wire \pisoInst|temp_reg~3_combout ;
+wire \instPIPO|tempreg~3_combout ;
 wire \p[5]~input_o ;
-wire \pisoInst|temp_reg~4_combout ;
+wire \instPIPO|tempreg~4_combout ;
 wire \p[6]~input_o ;
-wire \pisoInst|temp_reg~5_combout ;
+wire \instPIPO|tempreg~5_combout ;
 wire \p[7]~input_o ;
-wire \pisoInst|temp_reg~6_combout ;
+wire \instPIPO|tempreg~6_combout ;
 wire \p[8]~input_o ;
-wire \pisoInst|temp_reg~7_combout ;
-wire [7:0] \pisoInst|temp_reg ;
+wire \instPIPO|tempreg~7_combout ;
+wire [7:0] \instPIPO|tempreg ;
 
 
 hard_block auto_generated_inst(
@@ -115,7 +115,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: LCCOMB_X44_Y47_N24
+// Location: LCCOMB_X44_Y51_N16
 fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 // \~QUARTUS_CREATED_GND~I_combout  = GND
@@ -134,7 +134,7 @@ defparam \~QUARTUS_CREATED_GND~I .sum_lutc_input = "datac";
 
 // Location: IOOBUF_X46_Y54_N2
 fiftyfivenm_io_obuf \l[0]~output (
-	.i(\pisoInst|temp_reg [0]),
+	.i(gnd),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -147,7 +147,7 @@ defparam \l[0]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X46_Y54_N23
 fiftyfivenm_io_obuf \l[1]~output (
-	.i(\pisoInst|temp_reg [1]),
+	.i(\instPIPO|tempreg [0]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -160,7 +160,7 @@ defparam \l[1]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X51_Y54_N16
 fiftyfivenm_io_obuf \l[2]~output (
-	.i(\pisoInst|temp_reg [2]),
+	.i(\instPIPO|tempreg [1]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -173,7 +173,7 @@ defparam \l[2]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X46_Y54_N9
 fiftyfivenm_io_obuf \l[3]~output (
-	.i(\pisoInst|temp_reg [3]),
+	.i(\instPIPO|tempreg [2]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -186,7 +186,7 @@ defparam \l[3]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X56_Y54_N30
 fiftyfivenm_io_obuf \l[4]~output (
-	.i(\pisoInst|temp_reg [4]),
+	.i(\instPIPO|tempreg [3]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -199,7 +199,7 @@ defparam \l[4]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X58_Y54_N23
 fiftyfivenm_io_obuf \l[5]~output (
-	.i(\pisoInst|temp_reg [5]),
+	.i(\instPIPO|tempreg [4]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -212,7 +212,7 @@ defparam \l[5]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X66_Y54_N23
 fiftyfivenm_io_obuf \l[6]~output (
-	.i(\pisoInst|temp_reg [6]),
+	.i(\instPIPO|tempreg [5]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -225,7 +225,7 @@ defparam \l[6]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X56_Y54_N9
 fiftyfivenm_io_obuf \l[7]~output (
-	.i(\pisoInst|temp_reg [7]),
+	.i(\instPIPO|tempreg [6]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -238,7 +238,7 @@ defparam \l[7]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X51_Y54_N9
 fiftyfivenm_io_obuf \l[8]~output (
-	.i(gnd),
+	.i(\instPIPO|tempreg [7]),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -251,7 +251,7 @@ defparam \l[8]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X49_Y54_N9
 fiftyfivenm_io_obuf \l[9]~output (
-	.i(\pisoInst|temp_reg [7]),
+	.i(gnd),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -262,28 +262,16 @@ defparam \l[9]~output .bus_hold = "false";
 defparam \l[9]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X49_Y54_N29
-fiftyfivenm_io_ibuf \b[0]~input (
-	.i(b[0]),
+// Location: IOIBUF_X51_Y54_N29
+fiftyfivenm_io_ibuf \p[0]~input (
+	.i(p[0]),
 	.ibar(gnd),
 	.nsleep(vcc),
-	.o(\b[0]~input_o ));
+	.o(\p[0]~input_o ));
 // synopsys translate_off
-defparam \b[0]~input .bus_hold = "false";
-defparam \b[0]~input .listen_to_nsleep_signal = "false";
-defparam \b[0]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X69_Y54_N1
-fiftyfivenm_io_ibuf \p[9]~input (
-	.i(p[9]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\p[9]~input_o ));
-// synopsys translate_off
-defparam \p[9]~input .bus_hold = "false";
-defparam \p[9]~input .listen_to_nsleep_signal = "false";
-defparam \p[9]~input .simulate_z_as = "z";
+defparam \p[0]~input .bus_hold = "false";
+defparam \p[0]~input .listen_to_nsleep_signal = "false";
+defparam \p[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X51_Y54_N22
@@ -298,27 +286,39 @@ defparam \p[1]~input .listen_to_nsleep_signal = "false";
 defparam \p[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N0
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~0 (
+// Location: IOIBUF_X69_Y54_N1
+fiftyfivenm_io_ibuf \p[9]~input (
+	.i(p[9]),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\p[9]~input_o ));
+// synopsys translate_off
+defparam \p[9]~input .bus_hold = "false";
+defparam \p[9]~input .listen_to_nsleep_signal = "false";
+defparam \p[9]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X52_Y53_N8
+fiftyfivenm_lcell_comb \instPIPO|tempreg~0 (
 // Equation(s):
-// \pisoInst|temp_reg~0_combout  = (\p[9]~input_o  & \p[1]~input_o )
+// \instPIPO|tempreg~0_combout  = (\p[1]~input_o  & !\p[9]~input_o )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(\p[9]~input_o ),
-	.datad(\p[1]~input_o ),
+	.datac(\p[1]~input_o ),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~0_combout ),
+	.combout(\instPIPO|tempreg~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~0 .lut_mask = 16'hF000;
-defparam \pisoInst|temp_reg~0 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~0 .lut_mask = 16'h00F0;
+defparam \instPIPO|tempreg~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N1
-dffeas \pisoInst|temp_reg[0] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~0_combout ),
+// Location: FF_X52_Y53_N9
+dffeas \instPIPO|tempreg[0] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~0_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -327,11 +327,11 @@ dffeas \pisoInst|temp_reg[0] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [0]),
+	.q(\instPIPO|tempreg [0]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[0] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[0] .power_up = "low";
+defparam \instPIPO|tempreg[0] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[0] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X51_Y54_N1
@@ -346,27 +346,27 @@ defparam \p[2]~input .listen_to_nsleep_signal = "false";
 defparam \p[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N6
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~1 (
+// Location: LCCOMB_X52_Y53_N2
+fiftyfivenm_lcell_comb \instPIPO|tempreg~1 (
 // Equation(s):
-// \pisoInst|temp_reg~1_combout  = (\p[9]~input_o  & (\p[2]~input_o )) # (!\p[9]~input_o  & ((\pisoInst|temp_reg [0])))
+// \instPIPO|tempreg~1_combout  = (\p[2]~input_o  & !\p[9]~input_o )
 
-	.dataa(\p[2]~input_o ),
-	.datab(gnd),
-	.datac(\p[9]~input_o ),
-	.datad(\pisoInst|temp_reg [0]),
+	.dataa(gnd),
+	.datab(\p[2]~input_o ),
+	.datac(gnd),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~1_combout ),
+	.combout(\instPIPO|tempreg~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~1 .lut_mask = 16'hAFA0;
-defparam \pisoInst|temp_reg~1 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~1 .lut_mask = 16'h00CC;
+defparam \instPIPO|tempreg~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N7
-dffeas \pisoInst|temp_reg[1] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~1_combout ),
+// Location: FF_X52_Y53_N3
+dffeas \instPIPO|tempreg[1] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~1_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -375,11 +375,11 @@ dffeas \pisoInst|temp_reg[1] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [1]),
+	.q(\instPIPO|tempreg [1]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[1] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[1] .power_up = "low";
+defparam \instPIPO|tempreg[1] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[1] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X54_Y54_N29
@@ -394,27 +394,27 @@ defparam \p[3]~input .listen_to_nsleep_signal = "false";
 defparam \p[3]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N28
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~2 (
+// Location: LCCOMB_X52_Y53_N28
+fiftyfivenm_lcell_comb \instPIPO|tempreg~2 (
 // Equation(s):
-// \pisoInst|temp_reg~2_combout  = (\p[9]~input_o  & (\p[3]~input_o )) # (!\p[9]~input_o  & ((\pisoInst|temp_reg [1])))
+// \instPIPO|tempreg~2_combout  = (\p[3]~input_o  & !\p[9]~input_o )
 
 	.dataa(gnd),
 	.datab(\p[3]~input_o ),
-	.datac(\p[9]~input_o ),
-	.datad(\pisoInst|temp_reg [1]),
+	.datac(gnd),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~2_combout ),
+	.combout(\instPIPO|tempreg~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~2 .lut_mask = 16'hCFC0;
-defparam \pisoInst|temp_reg~2 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~2 .lut_mask = 16'h00CC;
+defparam \instPIPO|tempreg~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N29
-dffeas \pisoInst|temp_reg[2] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~2_combout ),
+// Location: FF_X52_Y53_N29
+dffeas \instPIPO|tempreg[2] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~2_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -423,11 +423,11 @@ dffeas \pisoInst|temp_reg[2] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [2]),
+	.q(\instPIPO|tempreg [2]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[2] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[2] .power_up = "low";
+defparam \instPIPO|tempreg[2] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[2] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X54_Y54_N22
@@ -442,27 +442,27 @@ defparam \p[4]~input .listen_to_nsleep_signal = "false";
 defparam \p[4]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N2
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~3 (
+// Location: LCCOMB_X52_Y53_N30
+fiftyfivenm_lcell_comb \instPIPO|tempreg~3 (
 // Equation(s):
-// \pisoInst|temp_reg~3_combout  = (\p[9]~input_o  & (\p[4]~input_o )) # (!\p[9]~input_o  & ((\pisoInst|temp_reg [2])))
+// \instPIPO|tempreg~3_combout  = (\p[4]~input_o  & !\p[9]~input_o )
 
 	.dataa(\p[4]~input_o ),
 	.datab(gnd),
-	.datac(\p[9]~input_o ),
-	.datad(\pisoInst|temp_reg [2]),
+	.datac(gnd),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~3_combout ),
+	.combout(\instPIPO|tempreg~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~3 .lut_mask = 16'hAFA0;
-defparam \pisoInst|temp_reg~3 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~3 .lut_mask = 16'h00AA;
+defparam \instPIPO|tempreg~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N3
-dffeas \pisoInst|temp_reg[3] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~3_combout ),
+// Location: FF_X52_Y53_N31
+dffeas \instPIPO|tempreg[3] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~3_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -471,11 +471,11 @@ dffeas \pisoInst|temp_reg[3] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [3]),
+	.q(\instPIPO|tempreg [3]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[3] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[3] .power_up = "low";
+defparam \instPIPO|tempreg[3] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[3] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X49_Y54_N1
@@ -490,27 +490,27 @@ defparam \p[5]~input .listen_to_nsleep_signal = "false";
 defparam \p[5]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N12
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~4 (
+// Location: LCCOMB_X52_Y53_N24
+fiftyfivenm_lcell_comb \instPIPO|tempreg~4 (
 // Equation(s):
-// \pisoInst|temp_reg~4_combout  = (\p[9]~input_o  & (\p[5]~input_o )) # (!\p[9]~input_o  & ((\pisoInst|temp_reg [3])))
+// \instPIPO|tempreg~4_combout  = (\p[5]~input_o  & !\p[9]~input_o )
 
 	.dataa(gnd),
-	.datab(\p[5]~input_o ),
-	.datac(\p[9]~input_o ),
-	.datad(\pisoInst|temp_reg [3]),
+	.datab(gnd),
+	.datac(\p[5]~input_o ),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~4_combout ),
+	.combout(\instPIPO|tempreg~4_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~4 .lut_mask = 16'hCFC0;
-defparam \pisoInst|temp_reg~4 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~4 .lut_mask = 16'h00F0;
+defparam \instPIPO|tempreg~4 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N13
-dffeas \pisoInst|temp_reg[4] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~4_combout ),
+// Location: FF_X52_Y53_N25
+dffeas \instPIPO|tempreg[4] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~4_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -519,11 +519,11 @@ dffeas \pisoInst|temp_reg[4] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [4]),
+	.q(\instPIPO|tempreg [4]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[4] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[4] .power_up = "low";
+defparam \instPIPO|tempreg[4] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[4] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X54_Y54_N15
@@ -538,27 +538,27 @@ defparam \p[6]~input .listen_to_nsleep_signal = "false";
 defparam \p[6]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N10
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~5 (
+// Location: LCCOMB_X52_Y53_N18
+fiftyfivenm_lcell_comb \instPIPO|tempreg~5 (
 // Equation(s):
-// \pisoInst|temp_reg~5_combout  = (\p[9]~input_o  & (\p[6]~input_o )) # (!\p[9]~input_o  & ((\pisoInst|temp_reg [4])))
+// \instPIPO|tempreg~5_combout  = (\p[6]~input_o  & !\p[9]~input_o )
 
-	.dataa(\p[6]~input_o ),
-	.datab(gnd),
-	.datac(\p[9]~input_o ),
-	.datad(\pisoInst|temp_reg [4]),
+	.dataa(gnd),
+	.datab(\p[6]~input_o ),
+	.datac(gnd),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~5_combout ),
+	.combout(\instPIPO|tempreg~5_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~5 .lut_mask = 16'hAFA0;
-defparam \pisoInst|temp_reg~5 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~5 .lut_mask = 16'h00CC;
+defparam \instPIPO|tempreg~5 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N11
-dffeas \pisoInst|temp_reg[5] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~5_combout ),
+// Location: FF_X52_Y53_N19
+dffeas \instPIPO|tempreg[5] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~5_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -567,11 +567,11 @@ dffeas \pisoInst|temp_reg[5] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [5]),
+	.q(\instPIPO|tempreg [5]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[5] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[5] .power_up = "low";
+defparam \instPIPO|tempreg[5] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[5] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X58_Y54_N29
@@ -586,27 +586,27 @@ defparam \p[7]~input .listen_to_nsleep_signal = "false";
 defparam \p[7]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N16
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~6 (
+// Location: LCCOMB_X52_Y53_N12
+fiftyfivenm_lcell_comb \instPIPO|tempreg~6 (
 // Equation(s):
-// \pisoInst|temp_reg~6_combout  = (\p[9]~input_o  & (\p[7]~input_o )) # (!\p[9]~input_o  & ((\pisoInst|temp_reg [5])))
+// \instPIPO|tempreg~6_combout  = (\p[7]~input_o  & !\p[9]~input_o )
 
 	.dataa(gnd),
 	.datab(\p[7]~input_o ),
-	.datac(\p[9]~input_o ),
-	.datad(\pisoInst|temp_reg [5]),
+	.datac(gnd),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~6_combout ),
+	.combout(\instPIPO|tempreg~6_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~6 .lut_mask = 16'hCFC0;
-defparam \pisoInst|temp_reg~6 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~6 .lut_mask = 16'h00CC;
+defparam \instPIPO|tempreg~6 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N17
-dffeas \pisoInst|temp_reg[6] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~6_combout ),
+// Location: FF_X52_Y53_N13
+dffeas \instPIPO|tempreg[6] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~6_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -615,11 +615,11 @@ dffeas \pisoInst|temp_reg[6] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [6]),
+	.q(\instPIPO|tempreg [6]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[6] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[6] .power_up = "low";
+defparam \instPIPO|tempreg[6] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[6] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X56_Y54_N1
@@ -634,27 +634,27 @@ defparam \p[8]~input .listen_to_nsleep_signal = "false";
 defparam \p[8]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X50_Y53_N30
-fiftyfivenm_lcell_comb \pisoInst|temp_reg~7 (
+// Location: LCCOMB_X52_Y53_N6
+fiftyfivenm_lcell_comb \instPIPO|tempreg~7 (
 // Equation(s):
-// \pisoInst|temp_reg~7_combout  = (\p[9]~input_o  & (\p[8]~input_o )) # (!\p[9]~input_o  & ((\pisoInst|temp_reg [6])))
+// \instPIPO|tempreg~7_combout  = (\p[8]~input_o  & !\p[9]~input_o )
 
-	.dataa(\p[8]~input_o ),
-	.datab(gnd),
-	.datac(\p[9]~input_o ),
-	.datad(\pisoInst|temp_reg [6]),
+	.dataa(gnd),
+	.datab(\p[8]~input_o ),
+	.datac(gnd),
+	.datad(\p[9]~input_o ),
 	.cin(gnd),
-	.combout(\pisoInst|temp_reg~7_combout ),
+	.combout(\instPIPO|tempreg~7_combout ),
 	.cout());
 // synopsys translate_off
-defparam \pisoInst|temp_reg~7 .lut_mask = 16'hAFA0;
-defparam \pisoInst|temp_reg~7 .sum_lutc_input = "datac";
+defparam \instPIPO|tempreg~7 .lut_mask = 16'h00CC;
+defparam \instPIPO|tempreg~7 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X50_Y53_N31
-dffeas \pisoInst|temp_reg[7] (
-	.clk(\b[0]~input_o ),
-	.d(\pisoInst|temp_reg~7_combout ),
+// Location: FF_X52_Y53_N7
+dffeas \instPIPO|tempreg[7] (
+	.clk(!\p[0]~input_o ),
+	.d(\instPIPO|tempreg~7_combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -663,23 +663,23 @@ dffeas \pisoInst|temp_reg[7] (
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\pisoInst|temp_reg [7]),
+	.q(\instPIPO|tempreg [7]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \pisoInst|temp_reg[7] .is_wysiwyg = "true";
-defparam \pisoInst|temp_reg[7] .power_up = "low";
+defparam \instPIPO|tempreg[7] .is_wysiwyg = "true";
+defparam \instPIPO|tempreg[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: IOIBUF_X51_Y54_N29
-fiftyfivenm_io_ibuf \p[0]~input (
-	.i(p[0]),
+// Location: IOIBUF_X49_Y54_N29
+fiftyfivenm_io_ibuf \b[0]~input (
+	.i(b[0]),
 	.ibar(gnd),
 	.nsleep(vcc),
-	.o(\p[0]~input_o ));
+	.o(\b[0]~input_o ));
 // synopsys translate_off
-defparam \p[0]~input .bus_hold = "false";
-defparam \p[0]~input .listen_to_nsleep_signal = "false";
-defparam \p[0]~input .simulate_z_as = "z";
+defparam \b[0]~input .bus_hold = "false";
+defparam \b[0]~input .listen_to_nsleep_signal = "false";
+defparam \b[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X46_Y54_N29

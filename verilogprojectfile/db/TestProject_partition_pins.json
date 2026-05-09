@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "l[0]",
-					"strict" : false
-				},
-				{
 					"name" : "l[1]",
 					"strict" : false
 				},
@@ -36,7 +32,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "l[9]",
+					"name" : "l[8]",
 					"strict" : false
 				},
 				{
@@ -48,7 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
+					"name" : "p[0]",
 					"strict" : false
 				},
 				{

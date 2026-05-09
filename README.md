@@ -7,8 +7,8 @@
 
 1. [x] 4-bit Register with Enable
 2. [x] 8-bit Shift Register (SISO)
-3. [ ] Shift Register (SIPO)
-4. [ ] Shift Register (PISO)
+3. [x] Shift Register (SIPO)
+4. [X] Shift Register (PISO)
 5. [ ] Shift Register (PIPO)
 6. [ ] Universal Shift Register
 7. [ ] 4-bit Ripple Counter (Asynchronous)
