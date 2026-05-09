@@ -1,0 +1,9 @@
+module registerPISO(
+input reg [7:0] dat,
+input clk,
+input loadshift,
+output ou
+
+);
+
+endmodule
