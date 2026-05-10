@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat May  9 23:52:02 2026
+Analysis & Synthesis Status : Successful - Sun May 10 20:01:04 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 Revision Name : TestProject
 Top-level Entity Name : TOP_MODULE
 Family : MAX 10
-Total logic elements : 8
-    Total combinational functions : 8
-    Dedicated logic registers : 8
-Total registers : 8
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 4
+Total registers : 4
 Total pins : 22
 Total virtual pins : 0
 Total memory bits : 0

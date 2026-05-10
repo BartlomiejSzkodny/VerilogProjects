@@ -9,4 +9,14 @@ output [9:0] l
 //registersipo inssipo(.clk(p[0]),.rst(p[1]),.ser(p[2]),.ou(l[7:0]));
 //registerPISO pisoInst(.dat(p[8:1]),.clk(b[0]),.loadshift(p[9]),.leds(l[7:0]),.ou(l[9]));
 //registerPIPO instPIPO(.d(p[8:1]),.clk(p[0]),.rst(p[9]),.q(l[8:1]));
+universalShiftregister ins_uni(
+.clk(b[0]),
+.s(p[1:0]),
+.pInput(p[6:3]),
+.sinleft(p[7]),
+.sinright(p[2]),
+.lout(l[7]),
+.rout(l[2]),
+.ledpout(l[6:3])
+);
 endmodule

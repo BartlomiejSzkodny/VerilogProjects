@@ -1,0 +1,10 @@
+module universalShiftregister(
+input s0,
+input s1,
+input [4:0] pInput,
+input sinleft,
+input sinright,
+output lout,
+output rout,
+output ledpout
+);
