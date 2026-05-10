@@ -9,7 +9,7 @@
 2. [x] 8-bit Shift Register (SISO)
 3. [x] Shift Register (SIPO)
 4. [X] Shift Register (PISO)
-5. [ ] Shift Register (PIPO)
+5. [x] Shift Register (PIPO)
 6. [ ] Universal Shift Register
 7. [ ] 4-bit Ripple Counter (Asynchronous)
 8. [ ] 4-bit Synchronous Up Counter
